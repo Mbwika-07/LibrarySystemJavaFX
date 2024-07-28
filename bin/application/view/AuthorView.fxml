@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="application.controller.AuthorController">
+    <VBox alignment="CENTER" spacing="10.0">
+        <TextField fx:id="nameField" promptText="Author Name"/>
+        <Button text="Add Author" onAction="#handleAddAuthor"/>
+        <TableView fx:id="authorTable">
+            <columns>
+                <TableColumn fx:id="nameColumn" text="Name"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>
