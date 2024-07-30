@@ -1,1 +1,20 @@
+.root {
+    -fx-padding: 10px;
+    -fx-background-color: #f0f0f0;
+}
+
+.center {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20px;
+}
+
+.left {
+    -fx-background-color: #e0e0e0;
+    -fx-pref-width: 200px;
+}
+
+.right {
+    -fx-background-color: #e0e0e0;
+    -fx-pref-width: 200px;
+}
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */

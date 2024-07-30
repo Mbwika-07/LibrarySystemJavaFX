@@ -1,77 +1,51 @@
 package application.controller;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-import application.model.Book;
-import application.dao.BookDAO;
 
 public class MainController {
-    @FXML
-    private TableView<Book> bookTable;
-    @FXML
-    private TableColumn<Book, String> titleColumn;
-    @FXML
-    private TableColumn<Book, String> authorColumn;
-    @FXML
-    private TableColumn<Book, String> genreColumn;
-    @FXML
-    private TableColumn<Book, String> isbnColumn;
 
-    private BookDAO bookDAO;
-    private ObservableList<Book> bookData;
-
-    public MainController() {
-        bookDAO = new BookDAO();
-        bookData = FXCollections.observableArrayList(bookDAO.getAllBooks());
+    @FXML
+    private void handleViewUsers(ActionEvent event) {
+        navigateTo("ViewUser.fxml");
     }
 
     @FXML
-    private void initialize() {
-        titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
-        authorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
-        genreColumn.setCellValueFactory(new PropertyValueFactory<>("genre"));
-        isbnColumn.setCellValueFactory(new PropertyValueFactory<>("isbn"));
-
-        bookTable.setItems(bookData);
+    private void handleAddUsers(ActionEvent event) {
+        navigateTo("AddUsers.fxml");
     }
 
     @FXML
-    private void handleAddBook() {
-        Book newBook = new Book("New Title", "New Author", "New Genre", "New ISBN");
-        bookDAO.addBook(newBook);
-        bookData.add(newBook);
+    private void handleRemoveUsers(ActionEvent event) {
+        navigateTo("RemoveUsers.fxml");
     }
 
     @FXML
-    private void handleRemoveBook() {
-        Book selectedBook = bookTable.getSelectionModel().getSelectedItem();
-        if (selectedBook != null) {
-            bookDAO.removeBook(selectedBook);
-            bookData.remove(selectedBook);
-        }
+    private void handleViewBooks(ActionEvent event) {
+        navigateTo("ViewBooks.fxml");
     }
 
     @FXML
-    private void handleCheckOutBook() {
-        // Implementation for checking out a book
+    private void handleAddBooks(ActionEvent event) {
+        navigateTo("AddBooks.fxml");
     }
 
     @FXML
-    private void handleReturnBook() {
-        // Implementation for returning a book
+    private void handleRemoveBooks(ActionEvent event) {
+        navigateTo("RemoveBooks.fxml");
     }
 
     @FXML
-    private void handleAddUser() {
-        // Implementation for adding a user
+    private void handleCheckoutBooks(ActionEvent event) {
+        navigateTo("CheckoutBooks.fxml");
     }
 
     @FXML
-    private void handleRemoveUser() {
-        // Implementation for removing a user
+    private void handleReturnBooks(ActionEvent event) {
+        navigateTo("ReturnBooks.fxml");
+    }
+
+    private void navigateTo(String fxmlFile) {
+        NavigationService.navigateTo(fxmlFile);
     }
 }
