@@ -5,13 +5,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="application.controller.ReturnBooksController">
-    <VBox alignment="CENTER" spacing="10.0">
-        <TextField fx:id="userIdField" promptText="User ID"/>
-        <TextField fx:id="bookIdField" promptText="Book ID"/>
-        <Button text="Return Book" onAction="#handleReturnBook"/>
-        <Button text="Back to Main" onAction="#handleBackToMain"/>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ReturnBooksController" styleClass="return-books-pane">
+    <VBox alignment="CENTER" spacing="10.0" layoutX="50.0" layoutY="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" AnchorPane.bottomAnchor="50.0">
+        <TextField fx:id="userIdField" promptText="User ID" styleClass="text-field"/>
+        <TextField fx:id="bookIdField" promptText="Book ID" styleClass="text-field"/>
+        <Button text="Return Book" onAction="#handleReturnBook" styleClass="button"/>
+        <Button text="Back to Main" onAction="#handleBackToMain" styleClass="button"/>
     </VBox>
 </AnchorPane>
-
-

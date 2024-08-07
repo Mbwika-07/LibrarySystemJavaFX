@@ -5,14 +5,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="application.controller.AddBooksController">
-    <VBox alignment="CENTER" spacing="10.0">
-        <TextField fx:id="bookIdField" promptText="Book ID"/>
-        <TextField fx:id="titleField" promptText="Title"/>
-        <TextField fx:id="authorField" promptText="Author"/>
-        <TextField fx:id="genreField" promptText="Genre"/>
-        <TextField fx:id="isbnField" promptText="ISBN"/>
-        <Button text="Add Book" onAction="#handleAddBook"/>
-        <Button text="Back to Main" onAction="#handleBackToMain"/>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="application.controller.AddBooksController" styleClass="add-books-pane">
+    <VBox alignment="CENTER" spacing="10.0" layoutX="50.0" layoutY="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" AnchorPane.bottomAnchor="50.0">
+        <TextField fx:id="bookIdField" promptText="Book ID" styleClass="text-field"/>
+        <TextField fx:id="titleField" promptText="Title" styleClass="text-field"/>
+        <TextField fx:id="authorField" promptText="Author" styleClass="text-field"/>
+        <TextField fx:id="genreField" promptText="Genre" styleClass="text-field"/>
+        <TextField fx:id="isbnField" promptText="ISBN" styleClass="text-field"/>
+        <Button text="Add Book" onAction="#handleAddBook" styleClass="button"/>
+        <Button text="Back to Main" onAction="#handleBackToMain" styleClass="button"/>
     </VBox>
 </AnchorPane>
