@@ -22,10 +22,11 @@ public class NavigationService {
             FXMLLoader loader = new FXMLLoader(NavigationService.class.getResource("/application/view/" + fxmlFile));
             Parent root = loader.load();
             Scene scene = new Scene(root);
+            scene.getStylesheets().add(NavigationService.class.getResource("/application/application.css").toExternalForm());
             primaryStage.setScene(scene);
+            primaryStage.setMaximized(true); // Ensure full screen
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
-
