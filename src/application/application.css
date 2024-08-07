@@ -52,20 +52,20 @@
 }
 
 /* Add Users Page */
-.add-user-pane {
+.add-users-pane {
     -fx-background-color: #000042;
     -fx-padding: 20px;
     -fx-alignment: center;
     -fx-spacing: 10px;
 }
 
-.add-user-pane .text-field {
+.add-users-pane .text-field {
     -fx-pref-width: 300px;
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
 }
 
-.add-user-pane .button {
+.add-users-pane .button {
     -fx-background-color: white;
     -fx-text-fill: black;
     -fx-padding: 10px 20px;
@@ -73,7 +73,7 @@
     -fx-border-radius: 10px;
 }
 
-.add-user-pane .button:hover {
+.add-users-pane .button:hover {
     -fx-background-color: black;
     -fx-text-fill: white;
 }

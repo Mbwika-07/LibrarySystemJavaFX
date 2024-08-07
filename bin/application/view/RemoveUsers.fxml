@@ -5,11 +5,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="application.controller.RemoveUsersController">
-    <VBox alignment="CENTER" spacing="10.0">
-        <TextField fx:id="usernameField" promptText="Username"/>
-        <TextField fx:id="idField" promptText="ID"/>
-        <Button text="Remove User" onAction="#handleRemoveUser"/>
-        <Button text="Back to Main" onAction="#handleBackToMain"/>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="application.controller.RemoveUsersController" styleClass="add-users-pane">
+    <VBox alignment="CENTER" spacing="10.0" layoutX="50.0" layoutY="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" AnchorPane.bottomAnchor="50.0">
+        <TextField fx:id="usernameField" promptText="Username" styleClass="text-field"/>
+        <TextField fx:id="idField" promptText="ID" styleClass="text-field"/>
+        <Button text="Remove User" onAction="#handleRemoveUser" styleClass="button"/>
+        <Button text="Back to Main" onAction="#handleBackToMain" styleClass="button"/>
     </VBox>
 </AnchorPane>
+
