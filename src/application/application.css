@@ -1,20 +1,41 @@
+/* The side navigation menu */
+.sidebar {
+    -fx-padding: 0;
+    -fx-background-color: #000042;
+    -fx-pref-width: 200px;
+    -fx-border-width: 0 1px 0 0; /* border on the right side */
+    -fx-border-color: #ccc;
+}
+
+/* Sidebar buttons */
+.sidebar .button {
+    -fx-background-color: #000042;
+    -fx-text-fill: white;
+    -fx-padding: 16px;
+    -fx-border-width: 0 0 1px 0; /* border between buttons */
+    -fx-border-color: #ccc;
+    -fx-border-style: solid;
+    -fx-cursor: hand;
+    -fx-min-width: 200px;
+    -fx-alignment: center-left;
+}
+
+/* Links on mouse-over */
+.sidebar .button:hover {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+/* Main content */
+.center {
+    -fx-padding: 20px;
+    -fx-background-image: url("image1.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+/* Root element */
 .root {
     -fx-padding: 10px;
     -fx-background-color: #f0f0f0;
 }
-
-.center {
-    -fx-background-color: #ffffff;
-    -fx-padding: 20px;
-}
-
-.left {
-    -fx-background-color: #e0e0e0;
-    -fx-pref-width: 200px;
-}
-
-.right {
-    -fx-background-color: #e0e0e0;
-    -fx-pref-width: 200px;
-}
-/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */

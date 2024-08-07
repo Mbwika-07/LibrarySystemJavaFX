@@ -22,6 +22,10 @@ public class Main extends Application {
             Scene scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("/application/application.css").toExternalForm());
             primaryStage.setTitle("Library Management System Group D2 Assignment & CAT");
+            
+            // Ensure the application opens in full screen mode
+            primaryStage.setMaximized(true);
+            
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch(Exception e) {
